@@ -33,7 +33,7 @@ class FavoriteStorage(object):
                                **kwargs)
 
         if self.is_favorite(userid, id):
-            self.remove_favorite(userid, type, id)
+            self.remove_favorite(userid, id)
 
         if not userid in self.get_favorites():
             self.annotations[FAVORITE_KEY][userid] = PersistentList()
@@ -49,7 +49,10 @@ class FavoriteStorage(object):
             raise KeyError, "No value for %s in %s favorites" % (id, userid)
 
         favorites_list.remove(favorites_list[num])
-        self.annotations[FAVORITE_KEY][userid] = favorites_list
+        if len(favorites_list) == 0:
+            del self.annotations[FAVORITE_KEY]
+        else:
+            self.annotations[FAVORITE_KEY][userid] = favorites_list
 
     def is_favorite(self, userid, id):
         if not userid in self.get_favorites():

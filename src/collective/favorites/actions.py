@@ -16,7 +16,8 @@ class FavoriteActions(BrowserView):
 
     def add(self):
         request = self.request
-        user = request.AUTHENTICATED_USER
+        mtool = getToolByName(self.context, 'portal_membership')
+        user = mtool.getAuthenticatedMember()
         view = request.get('view', '')
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
         site = getNavigationRootObject(self.context, portal)
@@ -36,7 +37,8 @@ class FavoriteActions(BrowserView):
 
     def remove(self):
         request = self.request
-        user = request.AUTHENTICATED_USER
+        mtool = getToolByName(self.context, 'portal_membership')
+        user = mtool.getAuthenticatedMember()
         view = request.get('view', '')
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
         site = getNavigationRootObject(self.context, portal)

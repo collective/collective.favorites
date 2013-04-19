@@ -5,7 +5,7 @@ class IFavoriteStorage(Interface):
     """Adapts view, context and request to get
     """
 
-    def add_favorite(user_id, type, id, date, **kwargs):
+    def add_favorite(user_id, id, type, date=None, view=None, **kwargs):
         """Add a favorite of a certain type
         """
 
@@ -24,6 +24,7 @@ class IFavoritesLayer(Interface):
 class IFavoritesPolicy(Interface):
     """A policy to display favorites
     """
+
     def get_favorites_infos(favorites_list):
         """Gets a list of favorites given by IFavoriteStorage,
         returns a list of dictionaries :
