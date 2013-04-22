@@ -51,6 +51,14 @@
       />
 
   <browser:page
+      for="*"
+      class=".actions.AjaxFavoriteActions"
+      attribute="get"
+      name="json-get-favorites"
+      permission="zope2.View"
+      />
+
+  <browser:page
       for="Products.CMFCore.interfaces.IContentish"
       class=".actions.AjaxFavoriteActions"
       attribute="remove"

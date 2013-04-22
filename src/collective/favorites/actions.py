@@ -12,6 +12,8 @@ from .interfaces import IFavoriteStorage
 from plone.app.layout.navigation.root import getNavigationRootObject
 from Products.CMFCore.interfaces._content import IFolderish
 from zope.i18n import translate
+from zope.component._api import getUtilitiesFor
+from collective.favorites.interfaces import IFavoritesPolicy
 
 
 class BaseFavoriteActions(BrowserView):
@@ -101,3 +103,19 @@ class AjaxFavoriteActions(BaseFavoriteActions):
         return {'status': 'favorite-off',
                 'msg': translate(msg, context=self.request)}
 
+    @json
+    def get(self):
+        policies = getUtilitiesFor(IFavoritesPolicy)
+        mtool = getToolByName(self.context, 'portal_membership')
+        user_id = mtool.getAuthenticatedMember().getId()
+        portal = getToolByName(self.context, 'portal_url').getPortalObject()
+        site = getNavigationRootObject(self.context, portal)
+        favorites_list = IFavoriteStorage(site).list_favorites(user_id)
+
+        favorites_infos = []
+        for policy_name, policy in policies:
+            favorites_infos.extend(policy.get_favorites_infos(self.context,
+                    [fav for fav in favorites_list if fav['type'] == policy_name]))
+
+        favorites_infos.sort(key=lambda x: x['index'])
+        return favorites_infos

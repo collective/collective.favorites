@@ -1,3 +1,5 @@
+from json.decoder import JSONDecoder
+
 import unittest2 as unittest
 
 from DateTime import DateTime
@@ -21,7 +23,7 @@ class TestExample(unittest.TestCase):
         self.portal = self.layer['portal']
         self.qi_tool = getToolByName(self.portal, 'portal_quickinstaller')
         login(self.app, SITE_OWNER_NAME)
-        self.portal.invokeFactory('Document', 'doc')
+        self.portal.invokeFactory('Document', 'doc', title="My doc")
         self.portal.invokeFactory('Document', 'doc2')
 
     def test_product_is_installed(self):
@@ -66,12 +68,19 @@ class TestExample(unittest.TestCase):
 
     def test_favorite_ajax_actions(self):
         login(self.portal, TEST_USER_NAME)
-        self.portal.doc.restrictedTraverse('@@add-favorite-ajax')()
+        doc = self.portal.doc
+        doc.restrictedTraverse('@@add-favorite-ajax')()
         storage = IFavoriteStorage(self.portal)
         self.assertEqual(len(storage.get_favorites()), 1)
         self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 1)
         self.assertEqual(len(storage.list_favorites('toto')), 0)
 
+        json = JSONDecoder().decode(
+                doc.restrictedTraverse('@@json-get-favorites')())
+        self.assertEqual(len(json), 1)
+        self.assertEqual(json[0]['title'], "My doc")
+
         self.portal.doc.restrictedTraverse('@@remove-favorite-ajax')()
         self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 0)
         self.assertEqual(len(storage.get_favorites()), 0)
+
