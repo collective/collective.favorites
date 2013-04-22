@@ -63,3 +63,15 @@ class TestExample(unittest.TestCase):
         self.portal.doc.restrictedTraverse('@@remove-favorite')()
         self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 0)
         self.assertEqual(len(storage.get_favorites()), 0)
+
+    def test_favorite_ajax_actions(self):
+        login(self.portal, TEST_USER_NAME)
+        self.portal.doc.restrictedTraverse('@@add-favorite-ajax')()
+        storage = IFavoriteStorage(self.portal)
+        self.assertEqual(len(storage.get_favorites()), 1)
+        self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 1)
+        self.assertEqual(len(storage.list_favorites('toto')), 0)
+
+        self.portal.doc.restrictedTraverse('@@remove-favorite-ajax')()
+        self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 0)
+        self.assertEqual(len(storage.get_favorites()), 0)

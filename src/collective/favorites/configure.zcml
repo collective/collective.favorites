@@ -42,6 +42,22 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      for="Products.CMFCore.interfaces.IContentish"
+      class=".actions.AjaxFavoriteActions"
+      attribute="add"
+      name="add-favorite-ajax"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      for="Products.CMFCore.interfaces.IContentish"
+      class=".actions.AjaxFavoriteActions"
+      attribute="remove"
+      name="remove-favorite-ajax"
+      permission="zope2.View"
+      />
+
   <cmf:registerDirectory
       name="favorites_resources"/>
 
