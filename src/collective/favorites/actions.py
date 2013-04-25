@@ -65,7 +65,10 @@ class FavoriteActions(BaseFavoriteActions):
         else:
             statusmsg.add(_("The document has been removed from your favorites"))
 
-        self.request.response.redirect(self.context.absolute_url())
+        site_properties = getToolByName(self.context, 'portal_properties').site_properties
+        useView = self.context.portal_type in site_properties.typesUseViewActionInListings
+        url = self.context.absolute_url() + (useView and "/view" or "")
+        self.request.response.redirect(url)
 
 
 def json(method):
