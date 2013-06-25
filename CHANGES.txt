@@ -4,15 +4,21 @@ Changelog
 1.2 (unreleased)
 ----------------
 
+- i18n portlet name and description.
+  [thomasdesvenain]
+
 - Plone 4.3 JQuery compatibility.
+  [thomasdesvenain]
 
 - Added views for ajax behaviour.
+  [thomasdesvenain]
 
 
 1.1.1 (2013-04-19)
 ------------------
 
 - Fixed and improved tests.
+  [thomasdesvenain]
 
 
 1.1 (2012-10-31)

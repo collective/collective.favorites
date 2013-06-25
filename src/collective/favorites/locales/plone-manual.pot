@@ -14,6 +14,8 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 
-#: ../portlet/favorites.py:28
-msgid "Favorites List"
+msgid "Favorites portlet"
+msgstr ""
+
+msgid "A portlet that displays your favorite elements"
 msgstr ""

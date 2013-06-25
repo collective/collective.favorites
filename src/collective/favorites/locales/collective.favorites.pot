@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone\n"
-"POT-Creation-Date: 2012-09-21 20:41+0000\n"
+"POT-Creation-Date: 2013-06-25 09:55+0000\n"
 "PO-Revision-Date: 2010-08-06 22:06+0100\n"
 "Last-Translator: Thomas Desvenain <thomas.desvenain@gmail.com>\n"
 "Language-Team: French <plone-fr@lists.plone.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 msgid "Add Favorites Portlet"
 msgstr ""
 
-#: ../switchfavorite.pt:5
+#: ../switchfavorite.pt:6
 msgid "Add to your favorites"
 msgstr ""
 
-#: ../switchfavorite.pt:4
+#: ../switchfavorite.pt:5
 msgid "Add/remove as favorite:"
 msgstr ""
 
@@ -38,23 +38,23 @@ msgstr ""
 msgid "Favorites portlet"
 msgstr ""
 
-#: ../switchfavorite.pt:16
+#: ../switchfavorite.pt:18
 msgid "Remove from your favorites"
 msgstr ""
 
-#: ../actions.py:33
+#: ../actions.py:55
 msgid "The document has been added to your favorites"
 msgstr ""
 
-#: ../actions.py:51
+#: ../actions.py:66
 msgid "The document has been removed from your favorites"
 msgstr ""
 
-#: ../actions.py:31
+#: ../actions.py:53
 msgid "The folder has been added to your favorites"
 msgstr ""
 
-#: ../actions.py:49
+#: ../actions.py:64
 msgid "The folder has been removed from your favorites"
 msgstr ""
 
