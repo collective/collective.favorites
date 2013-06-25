@@ -4,6 +4,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
+- Plone 4.3 JQuery compatibility.
+
 - Added views for ajax behaviour.
 
 

@@ -13,6 +13,7 @@
   <i18n:registerTranslations directory="locales" />
   <include package=".policies" />
   <include package=".portlet" />
+  <include package=".upgrades" />
 
   <adapter factory=".storage.FavoriteStorage" />
 

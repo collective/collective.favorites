@@ -1,9 +1,9 @@
 var favorites = {};
 
 favorites.init = function(){
-	jq('.favorite-button').hover(function(){
-		jq(this).find('img').toggle();
+	$('.favorite-button').hover(function(){
+		$(this).find('img').toggle();
 	})
 }
 
-jq(document).ready(favorites.init);
+$(document).ready(favorites.init);
