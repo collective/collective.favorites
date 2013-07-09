@@ -40,7 +40,7 @@ msgstr "Portlet des favoris"
 
 #: ../switchfavorite.pt:18
 msgid "Remove from your favorites"
-msgstr "Retirer de mes favoris"
+msgstr "Retirer de vos favoris"
 
 #: ../actions.py:55
 msgid "The document has been added to your favorites"
