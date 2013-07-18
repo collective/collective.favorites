@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.2 (unreleased)
-----------------
+1.1.2 (2013-07-18)
+------------------
 
 - i18n portlet name and description.
   [thomasdesvenain]
