@@ -4,16 +4,10 @@ Changelog
 1.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
-
-1.1.3 (2013-09-18)
-------------------
-
 - Added dutch translation [ralphjacobs]
 
 
-1.1.2 (2013-07-18)
+1.1.3 (2013-09-18)
 ------------------
 
 - i18n portlet name and description.
