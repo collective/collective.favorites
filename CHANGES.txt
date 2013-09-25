@@ -10,7 +10,7 @@ Changelog
 1.1.3 (2013-09-18)
 ------------------
 
-- Nothing changed yet.
+- Added dutch translation [ralphjacobs]
 
 
 1.1.2 (2013-07-18)
