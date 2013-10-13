@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 - Added dutch translation [ralphjacobs]
+- Added russian and ukrainian translation [bogdangi]
 
 
 1.1.3 (2013-09-18)
