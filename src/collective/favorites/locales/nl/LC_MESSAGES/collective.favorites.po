@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2014-05-05 09:06+0000\n"
-"PO-Revision-Date: 2012-10-31 15:36+0100\n"
+"PO-Revision-Date: 2014-05-05 15:36+0100\n"
 "Last-Translator: Ralph Jacobs <ralph@fourdigits.nl>\n"
 "Language-Team: Dutch <ralph@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
@@ -45,13 +45,12 @@ msgstr "Verwijder uit je favorieten"
 
 #: ../actions.py:51
 msgid "The item has been added to your favorites"
-msgstr ""
+msgstr "Het item is toegevoegd aan je favorieten"
 
 #: ../actions.py:57
 msgid "The item has been removed from your favorites"
-msgstr ""
+msgstr "Het item is verwijderd uit je favorieten"
 
 #: ../portlet/favorites.py:73
 msgid "This portlet displays the documents you have selected as your favorites."
 msgstr "Dit portlet toont de documenten welke je als favorieten hebt gemarkeerd."
-
