@@ -4,8 +4,14 @@ Changelog
 1.1.4 (unreleased)
 ------------------
 
-- Added dutch translation [ralphjacobs]
-- Added russian and ukrainian translation [bogdangi]
+- Use 'item' instead of 'document' or 'folder' in messages.
+  [cedricmessiant]
+
+- Added dutch translation
+  [ralphjacobs]
+
+- Added russian and ukrainian translation
+  [bogdangi]
 
 
 1.1.3 (2013-09-18)
