@@ -47,24 +47,14 @@ class FavoriteActions(BaseFavoriteActions):
         request = self.request
         view = request.get('view', '')
         super(FavoriteActions, self).add()
-
         statusmsg = IStatusMessage(request)
-        if IFolderish.providedBy(self.context):
-            statusmsg.add(_("The folder has been added to your favorites"))
-        else:
-            statusmsg.add(_("The document has been added to your favorites"))
-
+        statusmsg.add(_("The item has been added to your favorites"))
         request.response.redirect(self.context.absolute_url() + '/' + view)
 
     def remove(self):
         super(FavoriteActions, self).remove()
-
         statusmsg = IStatusMessage(self.request)
-        if IFolderish.providedBy(self.context):
-            statusmsg.add(_("The folder has been removed from your favorites"))
-        else:
-            statusmsg.add(_("The document has been removed from your favorites"))
-
+        statusmsg.add(_("The item has been removed from your favorites"))
         site_properties = getToolByName(self.context, 'portal_properties').site_properties
         useView = self.context.portal_type in site_properties.typesUseViewActionInListings
         url = self.context.absolute_url() + (useView and "/view" or "")
@@ -85,24 +75,14 @@ class AjaxFavoriteActions(BaseFavoriteActions):
     @json
     def add(self):
         super(AjaxFavoriteActions, self).add()
-
-        if IFolderish.providedBy(self.context):
-            msg = _("The folder has been added to your favorites")
-        else:
-            msg = _("The document has been added to your favorites")
-
+        msg = _("The item has been added to your favorites")
         return {'status': 'favorite-on',
                 'msg': translate(msg, context=self.request)}
 
     @json
     def remove(self):
         super(AjaxFavoriteActions, self).remove()
-
-        if IFolderish.providedBy(self.context):
-            msg = _("The folder has been removed from your favorites")
-        else:
-            msg = _("The document has been removed from your favorites")
-
+        msg = _("The item has been removed from your favorites")
         return {'status': 'favorite-off',
                 'msg': translate(msg, context=self.request)}
 

@@ -19,3 +19,4 @@ msgstr "Портлет котрий відображає ваші відібра
 
 msgid "Favorites portlet"
 msgstr "Відібране портлет"
+

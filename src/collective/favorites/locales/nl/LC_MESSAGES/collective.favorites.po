@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2012-10-31 14:33+0000\n"
+"POT-Creation-Date: 2014-05-05 09:06+0000\n"
 "PO-Revision-Date: 2012-10-31 15:36+0100\n"
 "Last-Translator: Ralph Jacobs <ralph@fourdigits.nl>\n"
 "Language-Team: Dutch <ralph@fourdigits.nl>\n"
@@ -19,11 +19,11 @@ msgstr ""
 msgid "Add Favorites Portlet"
 msgstr "Voeg favorieten portlet toe"
 
-#: ../switchfavorite.pt:5
+#: ../switchfavorite.pt:6
 msgid "Add to your favorites"
 msgstr "Voeg toe aan favorieten"
 
-#: ../switchfavorite.pt:4
+#: ../switchfavorite.pt:5
 msgid "Add/remove as favorite:"
 msgstr "Voeg toe/verwijder als favoriet."
 
@@ -39,28 +39,19 @@ msgstr "Favorieten Lijst"
 msgid "Favorites portlet"
 msgstr "Favorieten portlet"
 
-#: ../switchfavorite.pt:16
+#: ../switchfavorite.pt:18
 msgid "Remove from your favorites"
 msgstr "Verwijder uit je favorieten"
 
-#: ../actions.py:33
-msgid "The document has been added to your favorites"
-msgstr "Het document is toegevoegd aan je favorieten"
-
 #: ../actions.py:51
-msgid "The document has been removed from your favorites"
-msgstr "Dit document is verwijderd uit je favorieten"
+msgid "The item has been added to your favorites"
+msgstr ""
 
-#: ../actions.py:31
-msgid "The folder has been added to your favorites"
-msgstr "De map is toegevoegd aan je favorieten"
-
-#: ../actions.py:49
-msgid "The folder has been removed from your favorites"
-msgstr "De map is verwijderd uit je favorieten"
+#: ../actions.py:57
+msgid "The item has been removed from your favorites"
+msgstr ""
 
 #: ../portlet/favorites.py:73
-msgid ""
-"This portlet displays the documents you have selected as your favorites."
-msgstr ""
-"Dit portlet toont de documenten welke je als favorieten hebt gemarkeerd."
+msgid "This portlet displays the documents you have selected as your favorites."
+msgstr "Dit portlet toont de documenten welke je als favorieten hebt gemarkeerd."
+
