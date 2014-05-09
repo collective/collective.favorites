@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.5 (unreleased)
+1.1.5 (2014-05-09)
 ------------------
 
 - Use 'item' instead of 'document' or 'folder' in messages.
