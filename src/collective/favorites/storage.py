@@ -31,14 +31,16 @@ class FavoriteStorage(object):
         value = PersistentDict(type=type,
                                id=id,
                                **kwargs)
-
+        is_new = True
         if self.is_favorite(userid, id):
             self.remove_favorite(userid, id)
+            is_new = False
 
         if not userid in self.get_favorites():
             self.annotations[FAVORITE_KEY][userid] = PersistentList()
 
         self.annotations[FAVORITE_KEY][userid].append(value)
+        return is_new
 
     def remove_favorite(self, userid, id):
         favorites_list = self.get_favorites()[userid]

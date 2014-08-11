@@ -4,7 +4,8 @@ Changelog
 1.1.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- add_favorite returns True if a new favorite has been added.
+  [cedricmessiant]
 
 
 1.1.5 (2014-05-09)
