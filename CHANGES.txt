@@ -4,6 +4,9 @@ Changelog
 1.1.6 (unreleased)
 ------------------
 
+- Fixed: all favorites were deleted when a user delete his last favorite.
+  [cedricmessiant]
+
 - add_favorite returns True if a new favorite has been added.
   [cedricmessiant]
 

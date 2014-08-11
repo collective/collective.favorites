@@ -48,12 +48,10 @@ class FavoriteStorage(object):
             if value['id'] == id:
                 break
         else:
-            raise KeyError, "No value for %s in %s favorites" % (id, userid)
+            raise KeyError("No value for %s in %s favorites" % (id, userid))
 
         favorites_list.remove(favorites_list[num])
-        if len(favorites_list) == 0:
-            del self.annotations[FAVORITE_KEY]
-        else:
+        if favorites_list:
             self.annotations[FAVORITE_KEY][userid] = favorites_list
 
     def is_favorite(self, userid, id):
