@@ -50,9 +50,9 @@ class TestExample(unittest.TestCase):
 
         # remove favorite
         storage.remove_favorite('toto', self.portal.doc2.UID())
-        self.assertEqual(len(storage.get_favorites()), 1)
+        self.assertEqual(len(storage.get_favorites()['toto']), 1)
         storage.remove_favorite('toto', self.portal.doc.UID())
-        self.assertEqual(len(storage.get_favorites()), 0)
+        self.assertEqual(len(storage.get_favorites()['toto']), 0)
 
     def test_favorite_actions(self):
         login(self.portal, TEST_USER_NAME)
@@ -64,7 +64,7 @@ class TestExample(unittest.TestCase):
 
         self.portal.doc.restrictedTraverse('@@remove-favorite')()
         self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 0)
-        self.assertEqual(len(storage.get_favorites()), 0)
+        self.assertEqual(len(storage.get_favorites()[TEST_USER_ID]), 0)
 
     def test_favorite_ajax_actions(self):
         login(self.portal, TEST_USER_NAME)
@@ -82,5 +82,5 @@ class TestExample(unittest.TestCase):
 
         self.portal.doc.restrictedTraverse('@@remove-favorite-ajax')()
         self.assertEqual(len(storage.list_favorites(TEST_USER_ID)), 0)
-        self.assertEqual(len(storage.get_favorites()), 0)
+        self.assertEqual(len(storage.get_favorites()[TEST_USER_ID]), 0)
 
