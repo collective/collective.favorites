@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.6 (unreleased)
+1.1.6 (2014-09-15)
 ------------------
 
 - Fixed: all favorites were deleted when a user delete his last favorite.
