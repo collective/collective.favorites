@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2014-05-05 09:06+0000\n"
-"PO-Revision-Date: 2014-05-05 10:59+0100\n"
+"PO-Revision-Date: 2015-01-02 10:57+0100\n"
 "Last-Translator: Cédric Messiant <cedric.messiant@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 
 #: ../portlet/favorites.py:72
 msgid "Add Favorites Portlet"
-msgstr "Ajouter la portlet Favoris"
+msgstr "Ajouter le portlet Favoris"
 
 #: ../switchfavorite.pt:6
 msgid "Add to your favorites"
-msgstr "Ajouter à vos favoris"
+msgstr "Ajouter à mes favoris"
 
 #: ../switchfavorite.pt:5
 msgid "Add/remove as favorite:"
@@ -41,17 +41,18 @@ msgstr "Portlet des favoris"
 
 #: ../switchfavorite.pt:18
 msgid "Remove from your favorites"
-msgstr "Retirer de vos favoris"
+msgstr "Retirer de mes favoris"
 
 #: ../actions.py:51
 msgid "The item has been added to your favorites"
-msgstr "L'élément a été ajouté à vos favoris."
+msgstr "L'élément a été ajouté à mes favoris."
 
 #: ../actions.py:57
 msgid "The item has been removed from your favorites"
-msgstr "L'élément a été retiré de vos favoris."
+msgstr "L'élément a été retiré de mes favoris."
 
 #: ../portlet/favorites.py:73
-msgid "This portlet displays the documents you have selected as your favorites."
-msgstr "Cette portlet affiche les pages que vous avez sélectionnés comme favoris."
-
+msgid ""
+"This portlet displays the documents you have selected as your favorites."
+msgstr ""
+"Ce portlet affiche les pages que vous avez sélectionnées comme favoris."
