@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plone\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+msgid "A portlet that displays your favorite elements"
+msgstr "En portlet der viser de favoritter brugeren har valgt"
+
+msgid "Favorites portlet"
+msgstr "Favoritportlet"
+
