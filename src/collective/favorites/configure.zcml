@@ -67,12 +67,12 @@
       permission="zope2.View"
       />
 
-  <cmf:registerDirectory
-      name="favorites_resources"/>
-
-  <browser:resource
-      name="collective.favorites.js"
-      file="resources/favorites.js" />
+  <!-- Publish static files -->
+  <plone:static
+      name="collective.favorites"
+      type="plone"
+      directory="resources"
+      />
 
   <genericsetup:registerProfile
       name="default"

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1.8.dev0'
+version = '1.2.0.dev0'
 
 long_description = (
     open('README.txt').read()
@@ -38,6 +38,7 @@ setup(name='collective.favorites',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.api',
           # -*- Extra requirements: -*-
       ],
       extras_require={'test': ['plone.app.testing']},

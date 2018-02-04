@@ -7,6 +7,7 @@ from Products.CMFCore.utils import getToolByName
 
 from .interfaces import IFavoriteStorage
 from plone.app.layout.navigation.root import getNavigationRootObject
+from plone.protect.utils import addTokenToUrl
 
 
 class SwitchFavorite(ViewletBase):
@@ -26,3 +27,10 @@ class SwitchFavorite(ViewletBase):
         self.template = self.request.steps[-1]
         self.isfavorite = IFavoriteStorage(site).is_favorite(user_id,
                                                              IUUID(self.context))
+
+    def get_add_url(self):
+        return addTokenToUrl(self.context.absolute_url() + '/add-favorite')
+
+    def get_remove_url(self):
+        return addTokenToUrl(self.context.absolute_url() + '/remove-favorite')
+

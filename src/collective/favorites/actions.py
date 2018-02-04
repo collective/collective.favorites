@@ -14,6 +14,7 @@ from Products.CMFCore.interfaces._content import IFolderish
 from zope.i18n import translate
 from zope.component._api import getUtilitiesFor
 from collective.favorites.interfaces import IFavoritesPolicy
+from plone import api
 
 
 class BaseFavoriteActions(BrowserView):
@@ -55,8 +56,11 @@ class FavoriteActions(BaseFavoriteActions):
         super(FavoriteActions, self).remove()
         statusmsg = IStatusMessage(self.request)
         statusmsg.add(_("The item has been removed from your favorites"))
-        site_properties = getToolByName(self.context, 'portal_properties').site_properties
-        useView = self.context.portal_type in site_properties.typesUseViewActionInListings
+        try:
+            site_properties = getToolByName(self.context, 'portal_properties').site_properties
+            useView = self.context.portal_type in site_properties.typesUseViewActionInListings
+        except AttributeError:
+            useView = api.portal.get_registry_record('plone.types_use_view_action_in_listings')
         url = self.context.absolute_url() + (useView and "/view" or "")
         self.request.response.redirect(url)
 

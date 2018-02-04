@@ -2,6 +2,6 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
  <javascript cacheable="True" compression="safe" conditionalcomment=""
     cookable="True" enabled="on" expression=""
-    id="++resource++collective.favorites.js" inline="False"
+    id="++plone++collective.favorites/favorites.js" inline="False"
     authenticated="1" />
 </object>
