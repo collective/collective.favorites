@@ -1,10 +1,23 @@
 Changelog
 =========
 
-1.1.8 (unreleased)
+1.2.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Migrate package to plone5 (still using the old-style portal_javascript etc.)
+  [sunew]
+
+- Move from a skinfolder to static resources
+  [sunew]
+
+- Enable plone.protect for urls
+  [sunew]
+
+- Danish translation
+  [sunew]
+
+- Remove unnecessary dependency on zope.formlib
+  [daggelpop]
 
 
 1.1.7 (2015-04-03)

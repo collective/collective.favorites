@@ -2,7 +2,6 @@ from plone.i18n.normalizer.interfaces import IIDNormalizer
 from plone.memoize.instance import memoize
 from plone.portlets.interfaces import IPortletDataProvider
 from zope.component import getMultiAdapter, queryUtility, getUtilitiesFor
-from zope.formlib import form
 from zope.interface import implements
 
 from Acquisition import aq_inner
@@ -68,7 +67,7 @@ class Renderer(base.Renderer):
 
 
 class AddForm(base.NullAddForm):
-    form_fields = form.Fields(IFavoritesPortlet)
+    form_fields = IFavoritesPortlet
     label = _(u"Add Favorites Portlet")
     description = _(u"This portlet displays the documents you have selected as your favorites.")
 
