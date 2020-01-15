@@ -48,7 +48,7 @@ class FavoriteStorage(object):
             if value['id'] == id:
                 break
         else:
-            raise KeyError("No value for %s in %s favorites" % (id, userid))
+            return
 
         favorites_list.remove(favorites_list[num])
         if favorites_list:
