@@ -4,7 +4,11 @@ Changelog
 1.1.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do not raise an exception if trying to remove a non existant favorite
+  [frapell]
+
+- Support Plone 4.3
+  [frapell]
 
 
 1.1.7 (2015-04-03)
